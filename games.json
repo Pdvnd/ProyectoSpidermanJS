@@ -4,21 +4,21 @@
         "name": "Marvels Spider-Man",
         "year": 2018,
         "plataforma": "PS4",
-        "img": "./imagenes/img1.png"
+        "img": "-"
     },
     {
         "id": 2,
         "name": "Spider-Man Miles Morales",
         "year": 2020,
         "plataforma": "PS4, PS5",
-        "img": "./imagenes/img1.png"
+        "img": ""
     },
     {
         "id": 3,
         "name": "Marvel's Spider-Man Remastered",
         "year": 2022,
         "plataforma": "PS4, PS5",
-        "img": "./imagenes/img1.png"
+        "img": ""
     },
     {
         "id": 4,
