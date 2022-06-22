@@ -1,3 +1,4 @@
+
 //aqui estoy haciendo la funcion para que cada vez que baje haga el efecto que quiero
 window.onload = function () {
     window.addEventListener('scroll', e => {
@@ -78,9 +79,53 @@ lax.addElements(".nombre", {
             [0, 600],
             [0, 150],{
                 cssUnit: "px",
-            }
-        ]
-    }
-})
+            },
+        ],
+    },
+});
+
+lax.addElements(".peter-letra", {
+    scrollY: {
+      filter: [
+        [700, 800, 900, 1000, 1100, 1200, 1300],
+        [0, 20, 0, 20, 0, 20, 0],
+        {
+          cssFn: function (value) {
+            return `drop-shadow(0 0 ${value}px red)`;
+          },
+        },
+      ],
+      translateY: [
+        [1000, 1300, 6000],
+        [200, "elCenterY-150"],
+      ],
+    },
+  });
+
+  lax.addElements(".peter-parker-01", {
+    scrollY: {
+        scale: [
+          [800, 1500],
+          [0, 2],
+        ],
+        translateX: [
+          [2000, 2200, 3000],
+          [0, 1000, 0]
+        ],
+      },
+    });
 }
+//navbar sin boot
+const moreOptions = document.querySelector("#bmore");
+const moreMenu = document.querySelector(".more .menu");
+
+bShowMobileLinks.addEventListener("click", (e) => {
+  e.preventDefault();
+  mobileMenu.classList.toggle("show");
+});
+
+moreOptions.addEventListener("click", (e) => {
+  e.preventDefault();
+  moreMenu.classList.toggle("show");
+});
 
