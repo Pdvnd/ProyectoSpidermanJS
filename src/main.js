@@ -101,7 +101,4 @@ window.onload = function () {
       ],
     },
   });
-
 }
-
-
