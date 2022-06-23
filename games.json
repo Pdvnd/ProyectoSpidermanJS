@@ -3,28 +3,28 @@
         "id": 1,
         "name": "Marvels Spider-Man",
         "year": 2018,
-        "plataforma": "PS4",
-        "img": "-"
+        "platform": "PS4",
+        "img": "./img/marvels-spiderman-game.jpg"
     },
     {
         "id": 2,
         "name": "Spider-Man Miles Morales",
         "year": 2020,
-        "plataforma": "PS4, PS5",
-        "img": ""
+        "platform": "PS5",
+        "img": "'https://media.revistagq.com/photos/5cfa20d7cb3e974d1a5fc3dd/3:2/w_3999,h_2666,c_limit/GettyImages-525440005.jpg'"
     },
     {
         "id": 3,
         "name": "Marvel's Spider-Man Remastered",
         "year": 2022,
-        "plataforma": "PS4, PS5",
-        "img": ""
+        "platform": "PS5",
+        "img": "./img/marvels-spiderman-resm.jpeg"
     },
     {
         "id": 4,
         "name": "LEGO Marvel Super Heroes",
         "year": 2013,
-        "plataforma": "PS4",
-        "img": "https://www.playxfun.com/productos/lego-marvel-super-heroes-ps4-digital/"
+        "platform": "PS4",
+        "img": "./img/lego-marvel.jpg"
     }
 ]
