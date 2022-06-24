@@ -170,37 +170,70 @@ h1::before {
     transform: scaleX(0.8);
 }
 /*aqui comienzan mis estilos para la tercera seccion donde salen los juegos*/
- .plantilla{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
+.contenedor {
     background-color: black;
-    z-index: 100000;
+    
   }
-  h2 {
-    display: flex;
-    font-size: 60px;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
-    justify-content: center;
-    background-color: black;
-    color: white;
-};
-
-.button {
+  .contenedor h2 {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: black;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: antiquewhite;
-    justify-content: center;
-    display: flex;
-}
+    font-size: 40px;
+    letter-spacing: 10px;
+    text-align: center;
+    justify-items: center;
+    padding: 5vh 0vh;
+    font-weight: 1000;
+  }
+  .contenedor .contenedor-games{
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 7vh;
+    width: auto;
+    height: 100%;
+    display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+  }
+  
+  .contenedor .plantilla {
+    text-align: center;
+    color: black;
+    overflow:hidden;
+    background-color: white;
+    border: 1px solid lightgray;
+  }
+  
+  .contenedor .plantilla .img {
+    height: 200px;
+    width: auto;
+    -o-object-fit: cover;
+       object-fit:cover;
+    -o-object-position: center;
+       object-position: center;
+  }
 
-.card {
-    height: 30rem;
-    width: 30rem;
-}
-
-
-.containerList{
-    padding: 7rem;
-}
+  
+  .contenedor .plantilla .divC1 .form-select {
+    font-family: "Rubik", sans-serif;
+    font-size: 15px;
+    color: black;
+    width: 50%;
+    margin-left: 6vw;
+    border-radius: 0rem;
+    border: 1px solid #0000;
+  }
+  
+  .contenedor .plantilla .nombre-games {
+    margin-top: 2vh;
+    font-family: "Rubik", sans-serif;
+    font-size: 18px;
+    color: black;
+    text-align: center;
+  }
+  
+  .contenedor .plantilla .year {
+    font-family: "Rubik", sans-serif;
+    font-size: 15px;
+    color: black;
+    font-weight: 800;
+  }

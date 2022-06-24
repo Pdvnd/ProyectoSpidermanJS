@@ -1,4 +1,3 @@
-
 //aqui estoy haciendo la funcion para que cada vez que baje haga el efecto que quiero
 window.onload = function () {
   window.addEventListener('scroll', e => {
@@ -102,36 +101,33 @@ window.onload = function () {
     },
   });
 }
+
+
+function complete (e){
+  const games = e.currentTarget.response;
+
+for (const game of games) {
+  container.innerHTML +=`
+      <div class="plantilla">
+          <img class="img" src="${game.img}">
+          <div id="div1${game.id}" class="divC1">
+          </div>
+              <h2 class"titulo">${game.name}</h2>
+              <p class="year"> ${game.year}<p>
+          </div>
+          <select class="form-select">
+                  <option value="(plataformas)">(Plataformas)</option>
+                  <option value="1">PS4</option>
+                  <option value="2">PS5</option>
+                  </select>
+      `
+}
+}
+
 const container = document.querySelector("#container");
 const contenedorGames = document.querySelector(".contenedor-games");
-const games = [];
-var plantilla = new XMLHttpRequest()
+let plantilla = new XMLHttpRequest()
 plantilla.responseType= "json"
 plantilla.open("GET", "games.json")
 plantilla.send()
-plantilla.onload = function mostrarGames() {
-  const mostrarGames = () => {
-    for (const game of games) {
-        container.innerHTML +=
-    `<div class="col">
-        <div class="card">
-            <img src="${game.img}" class="card-img-top img" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">${game.name}</h5>
-                <p class="card-text">${game.platform}</p>
-                <p class="card-text"><span>$ ${game.year}</span></p>
-                <button onclick="masInfo()">Más info</button>
-            </div>
-        </div>
-    </div>`
-    };
-  };
-  mostrarGames()
-}
-
-
-
-function masInfo(){
-  alert('Este inmueble actualmente esta disponible. Comuniquese con nosotros a traves del siguiente numero para obtener toda la informacion 351 872 9568')
-}
-
+plantilla.addEventListener("load", complete)

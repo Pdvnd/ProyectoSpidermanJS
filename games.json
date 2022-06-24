@@ -11,7 +11,7 @@
         "name": "Spider-Man Miles Morales",
         "year": 2020,
         "platform": "PS5",
-        "img": "'https://media.revistagq.com/photos/5cfa20d7cb3e974d1a5fc3dd/3:2/w_3999,h_2666,c_limit/GettyImages-525440005.jpg'"
+        "img": "./img/spiderman-miles-morales.jpg"
     },
     {
         "id": 3,
