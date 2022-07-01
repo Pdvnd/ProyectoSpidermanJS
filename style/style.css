@@ -1,7 +1,7 @@
 * {
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
-
 body {
     background-color: black;
 }
@@ -170,70 +170,145 @@ h1::before {
     transform: scaleX(0.8);
 }
 /*aqui comienzan mis estilos para la tercera seccion donde salen los juegos*/
-.contenedor {
-    background-color: black;
-    
-  }
-  .contenedor h2 {
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: black;
-    font-size: 40px;
-    letter-spacing: 10px;
-    text-align: center;
-    justify-items: center;
-    padding: 5vh 0vh;
-    font-weight: 1000;
-  }
-  .contenedor .contenedor-games{
-    margin-left: 10vw;
-    margin-right: 10vw;
-    margin-top: 7vh;
-    width: auto;
-    height: 100%;
-    display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-  }
-  
-  .contenedor .plantilla {
-    text-align: center;
-    color: black;
-    overflow:hidden;
-    background-color: white;
-    border: 1px solid lightgray;
-  }
-  
-  .contenedor .plantilla .img {
-    height: 200px;
-    width: auto;
-    -o-object-fit: cover;
-       object-fit:cover;
-    -o-object-position: center;
-       object-position: center;
-  }
+  .titulo {
+  font-family: Rubik;
+  color: black;
+  font-size: 40px;
+  letter-spacing: 9px;
+  padding: 8vh 0vh;
+  font-weight: 1000;
+  text-align:center;
+}
 
-  
-  .contenedor .plantilla .divC1 .form-select {
-    font-family: "Rubik", sans-serif;
-    font-size: 15px;
-    color: black;
-    width: 50%;
-    margin-left: 6vw;
-    border-radius: 0rem;
-    border: 1px solid #0000;
+
+.contenedor, .games {
+  margin-left: 10vw;
+  margin-right: 10vw;
+  margin-top: 5vh;
+  width: auto;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+}
+
+ .tarjeta {
+  text-align: center;
+  color: black;
+  overflow: hidden;
+  border: 2px solid lightgray;
+
+}
+
+ .img {
+  height: 350px;
+  width: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+
+.divC1 {
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: auto;
+}
+
+
+.form-select {
+  font-family: "Rubik", sans-serif;
+  font-size: 15px;
+  color: black;
+  width: 50%;
+  border-radius: 2rem;
+  border: 2px solid #000000;
+}
+.btn {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #000000;
+  position: relative;
+  text-decoration: none;
+  font-weight: 400;
+  text-align: center;
+  border: 0;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-transform: uppercase;
+  background: none;
+  white-space: normal;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.contenedor .tarjeta .divC1 .btn-primary {
+  display: block;
+  margin: 0 auto;
+  padding: 1vh 0vw;
+  font-size: 14px;
+  border-radius: 0rem;
+  border-bottom: 3px solid #000000;
+}
+
+.contenedor .tarjeta .divC1 .btn-primary:hover {
+  background-size: 200% 200%;
+  background-image: -webkit-gradient (linear, left bottom, left top, color-stop(100%, #000000), to(transparent));
+  background-image: linear-gradient(to top, #000000 100%, transparent 100%);
+  color: black;
+  border-bottom: 3px solid #000000;
+  -webkit-transition: all 0.09s ease-in;
+  transition: all 0.09s ease-in;
+}
+
+.contenedor .tarjeta .divC1 .btn-small {
+  width: 40%;
+  display:inline-block;
+  letter-spacing: 2px;
+}
+
+.contenedor .tarjeta .divC1 .col-8 {
+  max-width: 66.666667%;
+}
+
+.contenedor .tarjeta .divC1 .mb-2 {
+  margin: 2rem 0rem;
+}
+
+.nombre-game {
+  margin-top: 2vh;
+  font-family: "Rubik", sans-serif;
+  font-size: 5px;
+  color: black;
+  text-align: center;
+}
+
+.contenedor .tarjeta .year {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 15px;
+  color: black;
+  font-weight: 800;
+}
+  .iconoSpiderman {
+    color: rgb(125, 13, 13);
+    font-size: 40px;
+    position: fixed;
+    right: 2vw;
+    bottom: 12vh;
   }
-  
-  .contenedor .plantilla .nombre-games {
-    margin-top: 2vh;
-    font-family: "Rubik", sans-serif;
-    font-size: 18px;
-    color: black;
-    text-align: center;
-  }
-  
-  .contenedor .plantilla .year {
-    font-family: "Rubik", sans-serif;
-    font-size: 15px;
-    color: black;
-    font-weight: 800;
+  #sipnosis {
+    display: none;
   }

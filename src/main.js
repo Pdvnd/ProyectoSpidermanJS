@@ -107,22 +107,33 @@ function complete (e){
   const games = e.currentTarget.response;
 
 for (const game of games) {
-  container.innerHTML +=`
-      <div class="plantilla">
+  container.innerHTML +=(`
+      <div class="tarjeta">
           <img class="img" src="${game.img}">
-          <div id="div1${game.id}" class="divC1">
-          </div>
-              <h2 class"titulo">${game.name}</h2>
-              <p class="year"> ${game.year}<p>
-          </div>
+          <div id="div1${game.id}" class="div1">
+          <h3 class="plataforma">Plataformas</h3>
           <select class="form-select">
-                  <option value="(plataformas)">(Plataformas)</option>
+                  <option value="(ver)">--</option>
                   <option value="1">PS4</option>
                   <option value="2">PS5</option>
                   </select>
-      `
+                  <button id="ver${game.sipnosi}" onclick="mostrar()" class="btn btn-primary btn-small col-8 mb-2">Sipnosis</button>
+                  <div id="sipnosis">
+                  <button class"ocultar" onclick="quitar()" class="btn btn-primary btn-small col-8 mb-2">Ocultar</button>
+                  </div>
+              <h2 class"nombre-game">${game.name}</h2>
+              <p class="year">${game.year}</p>
+          </div>
+      `);
+      
+}}
+function mostrar (){
+  document.getElementById('sipnosis').style.display = 'block'
 }
+function quitar (){
+  document.getElementById('sipnosis').style.display = 'none'
 }
+
 
 const container = document.querySelector("#container");
 const contenedorGames = document.querySelector(".contenedor-games");

@@ -3,28 +3,28 @@
         "id": 1,
         "name": "Marvels Spider-Man",
         "year": 2018,
-        "platform": "PS4",
-        "img": "./img/marvels-spiderman-game.jpg"
+        "img": "./img/marvels-spiderman-game.png",
+        "sipnosi": "El juego de Spiderman de 2018 es un juego"
     },
     {
         "id": 2,
         "name": "Spider-Man Miles Morales",
         "year": 2020,
-        "platform": "PS5",
-        "img": "./img/spiderman-miles-morales.jpg"
+        "img": "./img/spiderman-miles-morales.jpg",
+        "sipnosi": "El juego de Miles Morales es un juego basado en el multiverso de Spiderman"
     },
     {
         "id": 3,
         "name": "Marvel's Spider-Man Remastered",
         "year": 2022,
-        "platform": "PS5",
-        "img": "./img/marvels-spiderman-resm.jpeg"
+        "img": "./img/marvels-spiderman-resm.png",
+        "sipnosi": "El juego de Spiderman de 2018 es un juego"
     },
     {
         "id": 4,
         "name": "LEGO Marvel Super Heroes",
         "year": 2013,
-        "platform": "PS4",
-        "img": "./img/lego-marvel.jpg"
+        "img": "./img/lego-marvel.png",
+        "sipnosi": "El juego de Spiderman de 2018 es un juego"
     }
 ]
