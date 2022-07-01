@@ -102,8 +102,40 @@ window.onload = function () {
   });
 }
 
+fetch(`https://pokeapi.co/api/v2/berry-flavor/`)
+.then((resp)=> resp.json())
+.then((data)=>{
+  container.innerHTML +=(`
+  <div class="tarjeta">
+      <img class="img" src="${data.id}">
+      <div id="div1${data.name}" class="div1">
+      <h3 class="plataforma">Plataformas</h3>
+      <select class="form-select">
+              <option value="(ver)">--</option>
+              <option value="1">PS4</option>
+              <option value="2">PS5</option>
+              </select>
+              <button id="ver${data.id}" onclick="mostrar()" class="btn btn-primary btn-small col-8 mb-2">Sipnosis</button>
+              <div id="sipnosis">
+              <button class"ocultar" onclick="quitar()" class="btn btn-primary btn-small col-8 mb-2">Ocultar</button>
+              </div>
+          <h2 class"nombre-game">${data.names}</h2>
+          <p class="year">${data.move}</p>
+      </div>
+  `);
 
-function complete (e){
+}
+
+)
+function mostrar (){
+  document.getElementById('sipnosis').style.display = 'block'
+}
+function quitar (){
+  document.getElementById('sipnosis').style.display = 'none'
+}
+
+
+/*function complete (e){
   const games = e.currentTarget.response;
 
 for (const game of games) {
@@ -141,4 +173,4 @@ let plantilla = new XMLHttpRequest()
 plantilla.responseType= "json"
 plantilla.open("GET", "games.json")
 plantilla.send()
-plantilla.addEventListener("load", complete)
+plantilla.addEventListener("load", complete)*/
