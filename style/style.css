@@ -249,63 +249,112 @@ h1::before {
     bottom: 12vh;
   }
   /*aqui comienzan mis estilos para la seccion donde salen los videos*/
-.w-75{
+.w-75 {
   width: 75%;
   margin: 0 auto;
-  padding: 30px 0;
-  color: white;
-font-weight: 600;
-font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 13px
 }
-.titulo-videos{
-  font-size: 2.6rem;
+
+.titulo-videos {
+  font-size: 1.6em;
   padding-top: 50px;
+font-size: 50px;
   color: white;
-  font-family:Verdana, Geneva, Tahoma, sans-serif ;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
 }
-.titulo-videos2{
-  font-size: 1.6rem;
+.titulo-videos2 {
+  font-size: 1.6em;
   padding-top: 50px;
+  font-family: 'Courier New', Courier, monospace;
   color: white;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
-#videos{
+#videos {
   text-align: center;
   padding: 50px 0;
-  background-color: white;
+background-color: white;
   background-image: url(../img/spiderman-en-la-ciudad-4875.jpg);
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: cover;
-  opacity:0.8;
+
+  color: white;
 }
-#videos #sliders #controls{
+
+#videos #slider #controls {
   display: flex;
   justify-content: center;
-  padding: 50px 0;
 }
-#videos #sliders #controls #prev,
-#videos #sliders #controls #next{
+
+#videos #slider #controls #prev,
+#videos #slider #controls #next {
   border: none;
   height: 50px;
-  width: 60px;
-  background-color: rgb(105, 18, 18);
-  color: white;
+  width: 80px;
+  background-color: rgb(161, 25, 25);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
+  transition: all 0.1s ease;
 }
-#videos #sliders #controls #prev:hover,
-#videos #sliders #controls #next:hover{
-  background-color: rgb(175, 34, 34);
+#videos #slider #controls #prev:hover,
+#videos #slider #controls #next:hover{
+  background-color: rgb(214, 98, 98);
 }
 #videos #slider #current {
-  width: 1280px;
+  width: 1000px;
   margin: 50px auto;
-  border: solid 1px #9c0e0e;
+
 }
-#videos #slider #videos-container{
+#videos #slider #videos-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 10px;
+  width: 100%;
+  justify-content: center;
+  overflow: auto;
+}
+
+#videos #slider #videos-container .item {
+  cursor: pointer;
+  overflow: hidden;
+
+  min-width: 20px;
+  height: 180px;
+}
+
+#videos #slider #videos-container .item a {
+  position: relative;
+}
+
+#videos #slider #videos-container .item img {
+  object-fit: contain;
+  min-width: 55px;
+  height: 180px;
+  transition: opacity 0.3s ease;
+}
+
+#videos #slider #videos-container .item:hover img {
+  opacity: 0.6;
+  object-fit: contain;
+}
+
+#videos #slider #videos-container .item a::before {
+  font-family: "Material Icons";
+  font-size: 24px;
+  content: "play_arrow";
+  color: white;
+  position: absolute;
+  display: block;
+  left: 135px;
+  top: -15px;
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  border-radius: 50%;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
 }
