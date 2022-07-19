@@ -3,28 +3,24 @@
         "id": 1,
         "name": "Marvels Spider-Man",
         "year": 2018,
-        "img": "./img/marvels-spiderman-game.png",
-        "sipnosi": "El juego de Spiderman de 2018 es un juego"
+        "img": "./img/marvels-spiderman-game.png"
     },
     {
         "id": 2,
         "name": "Spider-Man Miles Morales",
         "year": 2020,
-        "img": "./img/spiderman-miles-morales.jpg",
-        "sipnosi": "El juego de Miles Morales es un juego basado en el multiverso de Spiderman"
+        "img": "./img/spiderman-miles-morales.jpg"
     },
     {
         "id": 3,
         "name": "Marvel's Spider-Man Remastered",
         "year": 2022,
-        "img": "./img/marvels-spiderman-resm.png",
-        "sipnosi": "El juego de Spiderman de 2018 es un juego"
+        "img": "./img/marvels-spiderman-resm.png"
     },
     {
         "id": 4,
-        "name": "LEGO Marvel Super Heroes",
-        "year": 2013,
-        "img": "./img/lego-marvel.png",
-        "sipnosi": "El juego de Spiderman de 2018 es un juego"
+        "name": "Marvel's Spider-Man 2",
+        "year": 2023,
+        "img": "./img/marvels-spider-man-2.png"
     }
 ]

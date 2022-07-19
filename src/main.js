@@ -102,40 +102,7 @@ window.onload = function () {
   });
 }
 
-fetch(`https://pokeapi.co/api/v2/berry-flavor/`)
-.then((resp)=> resp.json())
-.then((data)=>{
-  container.innerHTML +=(`
-  <div class="tarjeta">
-      <img class="img" src="${data.id}">
-      <div id="div1${data.name}" class="div1">
-      <h3 class="plataforma">Plataformas</h3>
-      <select class="form-select">
-              <option value="(ver)">--</option>
-              <option value="1">PS4</option>
-              <option value="2">PS5</option>
-              </select>
-              <button id="ver${data.id}" onclick="mostrar()" class="btn btn-primary btn-small col-8 mb-2">Sipnosis</button>
-              <div id="sipnosis">
-              <button class"ocultar" onclick="quitar()" class="btn btn-primary btn-small col-8 mb-2">Ocultar</button>
-              </div>
-          <h2 class"nombre-game">${data.names}</h2>
-          <p class="year">${data.move}</p>
-      </div>
-  `);
-
-}
-
-)
-function mostrar (){
-  document.getElementById('sipnosis').style.display = 'block'
-}
-function quitar (){
-  document.getElementById('sipnosis').style.display = 'none'
-}
-
-
-/*function complete (e){
+function complete (e){
   const games = e.currentTarget.response;
 
 for (const game of games) {
@@ -143,29 +110,18 @@ for (const game of games) {
       <div class="tarjeta">
           <img class="img" src="${game.img}">
           <div id="div1${game.id}" class="div1">
-          <h3 class="plataforma">Plataformas</h3>
+          <h2 class="titulo-2">Plataformas</h2>
           <select class="form-select">
                   <option value="(ver)">--</option>
                   <option value="1">PS4</option>
                   <option value="2">PS5</option>
                   </select>
-                  <button id="ver${game.sipnosi}" onclick="mostrar()" class="btn btn-primary btn-small col-8 mb-2">Sipnosis</button>
-                  <div id="sipnosis">
-                  <button class"ocultar" onclick="quitar()" class="btn btn-primary btn-small col-8 mb-2">Ocultar</button>
-                  </div>
-              <h2 class"nombre-game">${game.name}</h2>
-              <p class="year">${game.year}</p>
+              <h3 class"titulo-2">${game.name}</h3>
+              <p class="titulo-2">${game.year}</p>
           </div>
       `);
       
 }}
-function mostrar (){
-  document.getElementById('sipnosis').style.display = 'block'
-}
-function quitar (){
-  document.getElementById('sipnosis').style.display = 'none'
-}
-
 
 const container = document.querySelector("#container");
 const contenedorGames = document.querySelector(".contenedor-games");
@@ -173,4 +129,38 @@ let plantilla = new XMLHttpRequest()
 plantilla.responseType= "json"
 plantilla.open("GET", "games.json")
 plantilla.send()
-plantilla.addEventListener("load", complete)*/
+plantilla.addEventListener("load", complete)
+
+/*Videos*/
+const sliderContainer = document.querySelector("#slider");
+const currentContainer = document.querySelector("#current");
+const videosContainer = document.querySelector ("#videos-container");
+const bNext = document.querySelector ("#next");
+const bPrev = document.querySelector ("#prev");
+let current = 0;
+
+let videos = new XMLHttpRequest()
+videos.responseType="json"
+videos.open("GET", "videos.json")
+videos.send()
+videos.addEventListener("load", insertarVideos)
+
+bNext.addEventListener("click", (e) => {
+  current = current + 1  <= videos.length ? current + 1 : current;
+  insertarVideos(videos[current].id);
+});
+
+bPrev.addEventListener("click", (e) => {
+  current = current - 1 >= 0 ? current - 1 :current;
+  insertarVideos(videos[current].id);
+});
+
+
+
+function insertarVideos (id){
+  const videos = id.currentTarget.response;{
+  for (const video of videos) {
+    currentContainer.innerHTML =(`
+    <iframe width="853" height="480" src="https://www.youtube.com/embed/${video.id}" title="🔥  Sitio Web con HTML y CSS de Halo usando Flex, dark mode y responsive design" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`);
+        
+  }}}
