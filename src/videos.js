@@ -46,7 +46,11 @@ renderCurrentVideo(videos[current].id);
 renderVideos();
 
 function renderCurrentVideo(id) {
+<<<<<<< HEAD
   currentContainer.innerHTML = `<iframe width="900" height="600" src="https://www.youtube.com/embed/${id}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+=======
+  currentContainer.innerHTML = `<iframe width="100%" height="600" src="https://www.youtube.com/embed/${id}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+>>>>>>> c47594d47cff0d4783ed5249a13a010f7769a916
 }
 
 function renderVideos() {
