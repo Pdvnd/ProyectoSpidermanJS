@@ -115,7 +115,7 @@ for (const game of games) {
          <p class="year">${game.year}</p>
       </article>
          <select class="form-select">
-                  <option value="(ver)">--</option>
+                  <option value="(ver)">Plataformas disponibles</option>
                   <option value="1">PS4</option>
                   <option value="2">PS5</option>
                   </select>
