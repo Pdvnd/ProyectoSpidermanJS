@@ -173,36 +173,24 @@ h1::before {
     transform: scaleX(0.8);
 }
 /*aqui comienzan mis estilos para la tercera seccion donde salen los juegos*/
-  .titulo {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: white;
-  font-size: 40px;
-  letter-spacing: 35px;
-  padding: 6vh 0vh;
-  font-weight: 1000;
+
+
+#container{
+  display: grid;
+  align-content: center;
   text-align: center;
-  background-color:#000000;
-}
-.titulo-2{
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  color: white;
-  font-size: 40px;
-  letter-spacing: 16px;
-  padding: 8vh 0vh;
-  font-weight: 1000;
-  text-align: center;
+  
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
 }
 .contenedor{
+  
   background-color: #000000;
-  display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr;
-      
 }
- .tarjeta {
+.tarjeta{
   color: white;
   overflow: hidden;
-  border: 2px solid lightgray;
+  border: 2px solid rgba(255, 255, 255, 0.61);
       font-family: Verdana, Geneva, Tahoma, sans-serif;
       color: white;
       font-size: 40px;
@@ -212,35 +200,81 @@ h1::before {
       margin-left: 10vw;
       margin-right: 10vw;
       margin-top: 2vh;
-      padding: 10vh 30vh;
-
+      padding: 5vh 5vh;
+}
+  .form-select {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 6px;
+    color: rgba(0, 0, 0, 0.5);
+    width: 10%;
+    border-radius: 2rem;
+    border: 2px solid rgb(102, 21, 21);
+  }
+.titulo {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: white;
+  font-size: 50px;
+  letter-spacing: 35px;
+  padding: 6vh 0vh;
+  font-weight: 1000;
+  text-align: center;
+  background-color:#000000;
 }
 
- .img {
+
+
+.articulo {
+  padding: 20%;
+  position:relative;
+  bottom: 0;
+  z-index: 1;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.name{
+  color: #fff;
+  font-weight: 800;
+  border-bottom: #fff solid 1px;
+  font-size: 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.year {
+  font-weight: 300;
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: 10px;
+}
+
+.img {
   height:350px;
   width: auto;
+  align-content: center;
+  text-align: center;
+  -webkit-transition: all 4s ease;
+  -moz-transition: all 4s ease;
+  -o-transition: all 4s ease;
+  -ms-transition: all 4s ease;
+  transition: all 4s ease;
+}
+
+/*hovers*/
+
+.juegos:hover {
+  cursor: pointer;
+}
+
+.img:hover {
+  opacity: 0.2;
+  transform: scale(1.5);
 }
 
 
-.divC1 {
-  display: none;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-  height: auto;
-}
-.form-select {
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 6px;
-  color: black;
-  width: 50%;
-  border-radius: 2rem;
-  border: 2px solid #000000;
-}
+ /*logo de spiderman*/
   .iconoSpiderman {
     color: rgb(125, 13, 13);
     font-size: 40px;
@@ -249,63 +283,114 @@ h1::before {
     bottom: 12vh;
   }
   /*aqui comienzan mis estilos para la seccion donde salen los videos*/
-.w-75{
+.w-75 {
   width: 75%;
   margin: 0 auto;
-  padding: 30px 0;
-  color: white;
-font-weight: 600;
-font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 13px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
 }
-.titulo-videos{
-  font-size: 2.6rem;
+
+.titulo-videos {
+  font-size: 3.6em;
   padding-top: 50px;
   color: white;
-  font-family:Verdana, Geneva, Tahoma, sans-serif ;
+  font-weight: bold;
 }
-.titulo-videos2{
-  font-size: 1.6rem;
+.titulo-videos2 {
+  font-size: 1.6em;
   padding-top: 50px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: white;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
-#videos{
+#videos {
   text-align: center;
-  padding: 50px 0;
-  background-color: white;
+  padding: 35px 0;
+background-color: white;
   background-image: url(../img/spiderman-en-la-ciudad-4875.jpg);
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: cover;
-  opacity:0.8;
+  opacity: 0.9;
+  color: white;
+
 }
-#videos #sliders #controls{
+
+#videos #slider #controls {
   display: flex;
   justify-content: center;
-  padding: 50px 0;
 }
-#videos #sliders #controls #prev,
-#videos #sliders #controls #next{
+
+#videos #slider #controls #prev,
+#videos #slider #controls #next {
   border: none;
   height: 50px;
-  width: 60px;
-  background-color: rgb(105, 18, 18);
-  color: white;
+  width: 80px;
+  background-color: rgb(161, 25, 25);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
-#videos #sliders #controls #prev:hover,
-#videos #sliders #controls #next:hover{
-  background-color: rgb(175, 34, 34);
+#videos #slider #controls #prev:hover,
+#videos #slider #controls #next:hover{
+  background-color: rgb(214, 98, 98);
 }
 #videos #slider #current {
-  width: 1280px;
-  margin: 50px auto;
-  border: solid 1px #9c0e0e;
+  width: 100%;
+  margin: 180px auto;
+
 }
-#videos #slider #videos-container{
+#videos #slider #videos-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 10px;
+  width:100%;
+  justify-content: center;
+  overflow: auto;
+}
+
+#videos #slider #videos-container .item {
+  cursor: pointer;
+  overflow: hidden;
+
+  min-width: 8px;
+  height: 180px;
+}
+
+#videos #slider #videos-container .item a {
+  position: relative;
+}
+
+#videos #slider #videos-container .item img {
+  object-fit: contain;
+  min-width: 55px;
+  height: 180px;
+  transition: opacity 0.3s ease;
+}
+
+#videos #slider #videos-container .item:hover img {
+  opacity: 0.6;
+  object-fit: contain;
+}
+
+#videos #slider #videos-container .item a::before {
+  font-family: "Material Icons";
+  font-size: 24px;
+  content: "play_arrow";
+  color: white;
+  position: absolute;
+  display: block;
+  left: 135px;
+  top: -15px;
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  border-radius: 50%;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
 }

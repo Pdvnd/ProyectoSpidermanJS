@@ -107,18 +107,20 @@ function complete (e){
 
 for (const game of games) {
   container.innerHTML +=(`
-      <div class="tarjeta">
-          <img class="img" src="${game.img}">
-          <div id="div1${game.id}" class="div1">
-          <h2 class="titulo-2">Plataformas</h2>
-          <select class="form-select">
+  <div class="tarjeta">
+      <div class="juegos">
+         <img class="img" src="${game.img}">
+         <article class="articulo">
+         <p class="name">${game.name}</p>
+         <p class="year">${game.year}</p>
+      </article>
+         <select class="form-select">
                   <option value="(ver)">--</option>
                   <option value="1">PS4</option>
                   <option value="2">PS5</option>
                   </select>
-              <h3 class"titulo-2">${game.name}</h3>
-              <p class="titulo-2">${game.year}</p>
-          </div>
+      </div>
+      </div>
       `);
       
 }}
@@ -131,36 +133,3 @@ plantilla.open("GET", "games.json")
 plantilla.send()
 plantilla.addEventListener("load", complete)
 
-/*Videos*/
-const sliderContainer = document.querySelector("#slider");
-const currentContainer = document.querySelector("#current");
-const videosContainer = document.querySelector ("#videos-container");
-const bNext = document.querySelector ("#next");
-const bPrev = document.querySelector ("#prev");
-let current = 0;
-
-let videos = new XMLHttpRequest()
-videos.responseType="json"
-videos.open("GET", "videos.json")
-videos.send()
-videos.addEventListener("load", insertarVideos)
-
-bNext.addEventListener("click", (e) => {
-  current = current + 1  <= videos.length ? current + 1 : current;
-  insertarVideos(videos[current].id);
-});
-
-bPrev.addEventListener("click", (e) => {
-  current = current - 1 >= 0 ? current - 1 :current;
-  insertarVideos(videos[current].id);
-});
-
-
-
-function insertarVideos (id){
-  const videos = id.currentTarget.response;{
-  for (const video of videos) {
-    currentContainer.innerHTML =(`
-    <iframe width="853" height="480" src="https://www.youtube.com/embed/${video.id}" title="🔥  Sitio Web con HTML y CSS de Halo usando Flex, dark mode y responsive design" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`);
-        
-  }}}
