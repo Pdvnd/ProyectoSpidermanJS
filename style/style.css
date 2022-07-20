@@ -286,7 +286,6 @@ h1::before {
 .w-75 {
   width: 75%;
   margin: 0 auto;
-<<<<<<< HEAD
   font-size: 13px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   
@@ -294,52 +293,28 @@ h1::before {
 
 .titulo-videos {
   font-size: 3.6em;
-=======
-  font-size: 13px
-}
-
-.titulo-videos {
-  font-size: 1.6em;
->>>>>>> c47594d47cff0d4783ed5249a13a010f7769a916
   padding-top: 50px;
 font-size: 50px;
   color: white;
-<<<<<<< HEAD
   font-weight: bold;
-=======
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
->>>>>>> c47594d47cff0d4783ed5249a13a010f7769a916
 }
 .titulo-videos2 {
   font-size: 1.6em;
   padding-top: 50px;
-<<<<<<< HEAD
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-=======
-  font-family: 'Courier New', Courier, monospace;
->>>>>>> c47594d47cff0d4783ed5249a13a010f7769a916
   color: white;
 }
 #videos {
   text-align: center;
-<<<<<<< HEAD
   padding: 35px 0;
-=======
-  padding: 50px 0;
->>>>>>> c47594d47cff0d4783ed5249a13a010f7769a916
 background-color: white;
   background-image: url(../img/spiderman-en-la-ciudad-4875.jpg);
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: cover;
-<<<<<<< HEAD
   opacity: 0.9;
   color: white;
 
-=======
-
-  color: white;
->>>>>>> c47594d47cff0d4783ed5249a13a010f7769a916
 }
 
 #videos #slider #controls {
@@ -357,24 +332,15 @@ background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-<<<<<<< HEAD
   transition: all 0.2s ease;
-=======
-  transition: all 0.1s ease;
->>>>>>> c47594d47cff0d4783ed5249a13a010f7769a916
 }
 #videos #slider #controls #prev:hover,
 #videos #slider #controls #next:hover{
   background-color: rgb(214, 98, 98);
 }
 #videos #slider #current {
-<<<<<<< HEAD
   width: 100%;
   margin: 180px auto;
-=======
-  width: 1000px;
-  margin: 50px auto;
->>>>>>> c47594d47cff0d4783ed5249a13a010f7769a916
 
 }
 #videos #slider #videos-container {
@@ -382,11 +348,7 @@ background-color: white;
   grid-template-columns: 1fr 1fr 1fr ;
   grid-template-rows: 1fr 1fr 1fr;
   gap: 10px;
-<<<<<<< HEAD
   width:100%;
-=======
-  width: 100%;
->>>>>>> c47594d47cff0d4783ed5249a13a010f7769a916
   justify-content: center;
   overflow: auto;
 }
@@ -395,11 +357,7 @@ background-color: white;
   cursor: pointer;
   overflow: hidden;
 
-<<<<<<< HEAD
   min-width: 8px;
-=======
-  min-width: 20px;
->>>>>>> c47594d47cff0d4783ed5249a13a010f7769a916
   height: 180px;
 }
 
